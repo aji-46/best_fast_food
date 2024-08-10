@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>BEST BURGERS SHOP</h1>
+
+    </div>
+
+
+    
+        <center>
+            <table>
+                <tr style="background-color: yellow;">
+                <th>ITEM DESCRIPTION </th>
+                <th>price</th>
+              
+            </tr>
+            <tr>
+                <td>Mushroom Burger</td>
+                <td>&#x20B9;120</td>
+
+            </tr>
+    
+            <tr>
+              <td>Veg Burger</td>
+              <td>&#x20B9;60</td>
+
+          </tr>
+
+          <!-- <tr>
+            <td>Chicken Burger</td>
+            <td>&#x20B9;45</td>
+  
+        </tr> -->
+
+          
+        <tr>
+          <td>Chicken Pizza</td>
+          <td>&#x20B9;230</td>
+
+      </tr>
+
+      <tr>
+        <td>Vegetable Pizza</td>
+        <td>&#x20B9;300</td>
+
+    </tr>
+
+    <tr>
+      <td>Egg Roll</td>
+      <td>&#x20B9;200</td>
+
+  </tr>
+
+  <tr>
+    <td>Chicken Roll</td>
+    <td>&#x20B9;250</td>
+
+</tr>
+
+    
+          </table>
+        </center>
+    
+    </div>
+
+
+
+      </table>
+
+    </div>
+  
+    <div class="login-box">
+       
+        <form>
+          <form>
+            <div class="user-box">
+              <label for="order">SELECT YOUR ORDER</label>
+              <select id="your_order">
+                <option value="Mushroom Burger">Mushroom Burger</option>
+                <option value="Veg Burger">Veg Burger</option>
+                <!-- <option value="Chicken Burger">Chicken Burger</option> -->
+                <option value="Chicken Pizza">Chicken Pizza</option>
+                <option value="Vegetable Pizza">Vegetable Pizza</option>
+                <option value="Egg Roll">Egg Roll</option>
+                <option value="Chicken Roll">Chicken Roll</option>
+              
+              </select>
+            
+            
+            </div>
+
+            <input type="number" placeholder="enter your quantity" id="quantity">         
+            
+            <div class="btn">
+            <input type="button" value="order" onclick="order_now()" />
+          </div>
+           
+          </form> 
+          
+
+          <div class="amount">
+            <h2>YOUR BILL RECEIPT</h2>
+            <h3 id="output"></h3>
+
+          </div>
+
+
+
+          <script>
+            function order_now(){
+              console.log("yes order");
+              var your_order=document.getElementById('your_order').value;
+              console.log(your_order);
+
+              var  quantity=document.getElementById('quantity').value;
+              console.log(quantity)
+
+              var one_Mushroom_Burger=120;
+              var one_Veg_Burger=60;
+              var one_Chicken_Burger=45;
+              var one_Chicken_Pizza=230;
+              var one_Vegetable_Pizza=300;
+              var one_Egg_Roll=200;
+              var one_Chicken_Roll=250;
+
+              if(your_order=="Mushroom Burger"){
+                var total=parseInt(one_Mushroom_Burger)*parseInt(quantity);
+                document.getElementById('output').innerHTML='your total amount &#x20B9;'+total;
+
+              }
+
+
+              if(your_order=="Veg Burger"){
+                var total=parseInt(one_Veg_Burger)*parseInt(quantity);
+                document.getElementById('output').innerHTML='your total amount &#x20B9;'+total;
+
+              }
+
+              // if(your_order=="Chicken Burger"){
+              //   var total=parseInt(one_Chicken_Burge)*parseInt(quantity);
+              //   document.getElementById('output').innerHTML='your total amount &#x20B9;'+total;
+
+              // }
+
+              if(your_order=="Chicken Pizza"){
+                var total=parseInt(one_Chicken_Pizza)*parseInt(quantity);
+                document.getElementById('output').innerHTML='your total amount &#x20B9;'+total;
+
+              }
+
+              if(your_order=="Vegetable Pizza"){
+                var total=parseInt(one_Vegetable_Pizza=300)*parseInt(quantity);
+                document.getElementById('output').innerHTML='your total amount &#x20B9;'+total;
+
+              }
+
+
+              if(your_order=="Egg Roll"){
+                var total=parseInt(one_Egg_Roll=200)*parseInt(quantity);
+                document.getElementById('output').innerHTML='your total amount &#x20B9;'+total;
+
+              }
+
+              if(your_order=="Chicken Roll"){
+                var total=parseInt(one_Chicken_Roll)*parseInt(quantity);
+                document.getElementById('output').innerHTML='your total amount &#x20B9;'+total;
+
+              }
+
+            }
+          </script>
+
+
+    </script>
+</body>
+</html>                                                                                          
